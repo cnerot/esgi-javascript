@@ -1,8 +1,4 @@
-console.log('ok')
-
 var hw = "hello world";
-
-
 
 console.log(ucFirst(hw));
 console.log(capitalize(hw));
