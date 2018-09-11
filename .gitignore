@@ -1,0 +1,5 @@
+docker/docker-compose.yml
+docker/asset/asset.values.js
+assets/node_modules
+assets/webpack/webpack.config.dev.js
+assets/webpack/webpack.config.prod.js
