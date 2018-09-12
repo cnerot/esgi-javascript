@@ -1,8 +1,4 @@
-console.log('ok')
-
 var hw = "hello world";
-
-
 
 console.log(ucFirst(hw));
 console.log(capitalize(hw));
@@ -15,13 +11,12 @@ console.log(yoda(hw));
 console.log(vig(hw, "key"));
 
 function ucFirst(str) {
- if (str.length > 0) {
-   return str[0].toUpperCase() + str.substring(1);
- } else {
-   return str;
- }
+	if (str.length > 0) {
+		return str[0].toUpperCase() + str.substring(1);
+	} else {
+		return str;
+	}
 }
-
 
 function capitalize(str){
 	var res = "";
@@ -30,10 +25,11 @@ function capitalize(str){
 		for (var i = 0; i < strs.length ; i++) {
 			res +=  strs[i][0].toUpperCase() + strs[i].substring(1) + " ";
 		}
- 	} else {
-  	}
-  	return res
+	} else {
+	}
+	return res
 }
+
 function camelCase(str){
 	var res = "";
 	if (str.length > 0) {
@@ -41,14 +37,13 @@ function camelCase(str){
 		for (var i = 0; i < strs.length ; i++) {
 			res +=  strs[i][0].toUpperCase() + strs[i].substring(1);
 		}
- 	} else {
-  	}
-  	return res
+	} else {
+	}
+	return res
 }
-
 function snake_case(str){
-  	return str.toLowerCase().split(' ').join("_");
-} 		
+	return str.toLowerCase().split(' ').join("_");
+}
 function prop_access(obj, prop){
 	var o = obj;
 	var obj_class = o.constructor.name;
@@ -67,36 +62,36 @@ function prop_access(obj, prop){
 function leet(str) {
 	var result = "";
 	for (var i = 0; i < str.length; i++) {
-			var char = str.charAt(i);
-			if (char.toLowerCase() == "a"){
-				char = "4";
-			}
-			if (char.toLowerCase() == "e"){
-				char = "3";
-			}
-			if (char.toLowerCase() == "i"){
-				char = "!";
-			}
-			if (char.toLowerCase() == "o"){
-				char = "0";
-			}
-			if (char.toLowerCase() == "u"){
-				char = "(_)";
-			}
-			if (char.toLowerCase() == "y"){
-				char = "7";
-			}
-			result += char;
+		var char = str.charAt(i);
+		if (char.toLowerCase() == "a"){
+			char = "4";
+		}
+		if (char.toLowerCase() == "e"){
+			char = "3";
+		}
+		if (char.toLowerCase() == "i"){
+			char = "!";
+		}
+		if (char.toLowerCase() == "o"){
+			char = "0";
+		}
+		if (char.toLowerCase() == "u"){
+			char = "(_)";
+		}
+		if (char.toLowerCase() == "y"){
+			char = "7";
+		}
+		result += char;
 	}
 	return result;
 }
 
 function verlan(string){
-  return string.split("").reverse().join("").split(" ").reverse().join(" ");
+	return string.split("").reverse().join("").split(" ").reverse().join(" ");
 }
 
 function yoda(string){
-  return string.split(' ').reverse().join(" ");
+	return string.split(' ').reverse().join(" ");
 }
 function vig(input, clef)
 {
@@ -128,16 +123,16 @@ function vig(input, clef)
 	var n=0;
 	for (i=0; i< input.length; i ++)
 	{
-	   var input_char = input.charAt (i);
-	   var input_char_value = alphabet.indexOf(input_char);
-	   if (input_char_value>-1)  // ne (dé)chiffre que les 26 lettres majuscules
+		var input_char = input.charAt (i);
+		var input_char_value = alphabet.indexOf(input_char);
+		if (input_char_value>-1)  // ne (dé)chiffre que les 26 lettres majuscules
 		{
-		
+
 			input_char_value += alphabet.indexOf(clef.charAt(clef_index));
 			input_char_value += 26;
 			input_char_value %= 26;
- 	  		if ((n%5==0) && (n>0)) {output+=" "};
-	 		n++;
+			if ((n%5==0) && (n>0)) {output+=" "};
+			n++;
 			output += alphabet.charAt(input_char_value);
 			clef_index = (clef_index+1) % clef_long;
 		}
